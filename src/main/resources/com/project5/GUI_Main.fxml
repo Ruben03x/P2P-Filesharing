@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="41.0" prefWidth="800.0" style="-fx-background-color: #a69eb0;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonDownload" alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDownload" prefHeight="41.0" prefWidth="176.0" text="Download" textAlignment="CENTER" textFill="#727272">
+               <font>
+                  <Font name="Javanese Text" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonPause" alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePause" prefHeight="41.0" prefWidth="165.0" text="Pause" textAlignment="CENTER" textFill="#727272">
+               <font>
+                  <Font name="Javanese Text" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textSearch" alignment="BOTTOM_LEFT" prefHeight="41.0" prefWidth="342.0" />
+            <Button fx:id="buttonSearch" alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSearch" prefHeight="41.0" prefWidth="125.0" text="Search" textAlignment="CENTER" textFill="#727272">
+               <font>
+                  <Font name="Javanese Text" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox prefHeight="73.0" prefWidth="800.0" style="-fx-background-color: #a69eb0;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#efeff2" strokeType="OUTSIDE" strokeWidth="0.0" text="FILE TRANSFER" textAlignment="CENTER" wrappingWidth="796.15625">
+               <font>
+                  <Font name="Javanese Text" size="32.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="466.0" style="-fx-background-color: #a69eb0;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#efeff2" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Results" textAlignment="CENTER" wrappingWidth="176.13671875">
+               <font>
+                  <Font name="Javanese Text" size="19.0" />
+               </font>
+            </Text>
+            <ListView fx:id="fileListView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="454.0" />
+         </children>
+      </VBox>
+   </right>
+   <left>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="342.0" style="-fx-background-color: #a69eb0;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#efeff2" strokeType="OUTSIDE" strokeWidth="0.0" text="Progress" textAlignment="CENTER" wrappingWidth="345.13671875">
+               <font>
+                  <Font name="Javanese Text" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#efeff2" strokeType="OUTSIDE" strokeWidth="0.0" text="Download" textAlignment="CENTER" translateY="40.0" wrappingWidth="345.13671875">
+               <font>
+                  <Font name="Javanese Text" size="19.0" />
+               </font>
+            </Text>
+            <ProgressBar fx:id="progressDownload" prefHeight="24.0" prefWidth="330.0" progress="0.0" translateX="5.0" translateY="40.0" />
+            <Text fill="#efeff2" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload" textAlignment="CENTER" translateY="40.0" wrappingWidth="345.13671875">
+               <font>
+                  <Font name="Javanese Text" size="19.0" />
+               </font>
+            </Text>
+            <ProgressBar fx:id="progressUpload" prefHeight="24.0" prefWidth="330.0" progress="0.0" translateX="5.0" translateY="40.0" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
